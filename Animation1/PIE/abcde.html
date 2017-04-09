@@ -1,0 +1,63 @@
+
+<html>
+<head>
+	<title> Test </title>
+	<style>
+	body{
+		margin: 0;
+		overflow: hidden;
+	}
+	canvas{
+		background: red;
+	}
+	</style>
+</head>
+<body>
+	<script src="three.js"></script>
+	<script>
+	var scene = new THREE.Scene();
+		var renderer = new THREE.WebGLRenderer();
+	renderer.setPixelRatio( window.devicePixelRatio );
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	document.body.appendChild( renderer.domElement );
+	scene.background = new THREE.Color( 0x00BFFF );
+		var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
+	camera.position.set( 0, 5, 1000 );
+		
+		renderer.render(scene,camera);
+	</script>
+</body>
+</html>
+
+<!--
+<html>
+<head>
+	<title> Test </title>
+	<style>
+	body{
+		margin: 0;
+		overflow: hidden;
+	}
+	canvas{
+		background: red;
+	}
+	</style>
+</head>
+<body>
+	
+	<script src="three.js"></script>
+	<script>
+	var scene = new THREE.Scene();
+		var renderer = new THREE.WebGLRenderer();
+		//renderer.setClearColor(0x00ff00);
+		renderer.setPixelRatio(window.devicePixelRatio);
+		renderer.setSize(window.innerwidth, window.innerHeight);
+document.body.appendChild( renderer.domElement );
+		var camera = new THREE.PerspectiveCamers(35,window.innerWidth / window.innerHeight,1,3000);
+		var scene = new THREE.Scene();
+		scene.background = new THREE.Color( 0x00BFFF );
+		renderer.render(scene,camera);
+	</script>
+</body>
+</html>
+-->
